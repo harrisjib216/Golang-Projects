@@ -28,13 +28,11 @@ func home(c *gin.Context) {
 	c.String(200, "Welcome to the album api")
 }
 
-// todo
 func getAllAlbums(c *gin.Context) {
 	fmt.Println(c)
 	c.JSON(200, Database)
 }
 
-// todo
 func getAlbum(c *gin.Context) {
 	id := c.Param("id")
 
@@ -48,7 +46,6 @@ func getAlbum(c *gin.Context) {
 	c.String(400, "Album could not be found")
 }
 
-// todo
 func postAlbum(c *gin.Context) {
 	var newAlbum Album
 
@@ -65,7 +62,6 @@ func postAlbum(c *gin.Context) {
 	})
 }
 
-// todo
 func SetupRouter() *gin.Engine {
 	router := gin.Default()
 
@@ -81,3 +77,8 @@ func SetupRouter() *gin.Engine {
 func main() {
 	SetupRouter().Run(":8000")
 }
+
+/*
+todo
+- connect to Postgres
+*/
